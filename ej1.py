@@ -6,7 +6,7 @@ def body(url):
     article = Article(url)
     article.download()
     article.parse()
-    return Counter(filter(None,re.split(r'[\W\d]+',article.text)))
+    return Counter(filter(None,re.split("[\W\d]+",article.text)))
     #Counter() devuelve un diccionario
     #filter(None,...) elimina de la lista las entradas vacias
     #re.split() devuelve una lista de palabras que para separarlas del todo el texto usa una regular expression como criterio
